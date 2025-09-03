@@ -29,10 +29,9 @@ The frontend will start on port 3000
 - PATCH /api/tasks/:id/toggle → Delete task by id
 
 #### Example Response
-
 {
   "success": true,
-
+  
   "data": {
   
     "id": 1,
@@ -46,7 +45,6 @@ The frontend will start on port 3000
     "createdAt": "2025-09-03T09:00:00.000Z",
     
     "priority": "medium"
-    
   }
 }
 
@@ -77,6 +75,7 @@ The frontend will start on port 3000
 - **Testing & Debugging (~20 minutes)**  
   - Manual API testing (Postman / curl)  
   - Fixing edge cases and improving error messages  
+
 
 
 
