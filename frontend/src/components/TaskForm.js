@@ -9,7 +9,7 @@ function TaskForm({ task, onSubmit, onCancel, isEditing }) {
   });
   const [errors, setErrors] = useState({});
 
-  // Populate form when editing
+  // fill form fields when editing
   useEffect(() => {
     if (isEditing && task) {
       setFormData({
@@ -36,7 +36,7 @@ function TaskForm({ task, onSubmit, onCancel, isEditing }) {
       newErrors.title = 'Title must be less than 100 characters';
     }
 
-    // description is optional – only validate length if provided
+    // description is optional, check only length
     if (formData.description && formData.description.length > 500) {
       newErrors.description = 'Description must be less than 500 characters';
     }
@@ -59,10 +59,7 @@ function TaskForm({ task, onSubmit, onCancel, isEditing }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     try {
       await onSubmit({
@@ -89,6 +86,7 @@ function TaskForm({ task, onSubmit, onCancel, isEditing }) {
           </button>
         </div>
 
+        {/* form inputs */}
         <form onSubmit={handleSubmit} className="task-form">
           <div className="form-group">
             <label htmlFor="title" className="form-label">
@@ -148,6 +146,7 @@ function TaskForm({ task, onSubmit, onCancel, isEditing }) {
             )}
           </div>
 
+          {/* form buttons */}
           <div className="form-actions">
             <button
               type="button"

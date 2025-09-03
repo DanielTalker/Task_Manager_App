@@ -21,8 +21,9 @@ function App() {
 
   useEffect(() => {
     applyFilter();
-  }, [tasks, filter, searchTerm]); // listen also to searchTerm
+  }, [tasks, filter, searchTerm]);
 
+  // fetch tasks from backend
   const loadTasks = async () => {
     try {
       setIsLoading(true);
@@ -37,6 +38,7 @@ function App() {
     }
   };
 
+  // apply filter and search
   const applyFilter = () => {
     let filtered = [...tasks];
 
@@ -62,6 +64,7 @@ function App() {
     setFilteredTasks(filtered);
   };
 
+  // create new task
   const handleCreateTask = async (taskData) => {
     try {
       const response = await ApiService.createTask(taskData);
@@ -73,6 +76,7 @@ function App() {
     }
   };
 
+  // update task
   const handleUpdateTask = async (id, updates) => {
     try {
       const response = await ApiService.updateTask(id, updates);
@@ -87,6 +91,7 @@ function App() {
     }
   };
 
+  // delete task
   const handleDeleteTask = async (id) => {
     if (!window.confirm('Are you sure you want to delete this task?')) {
       return;
@@ -100,6 +105,7 @@ function App() {
     }
   };
 
+  // toggle task completed status
   const handleToggleTask = async (id) => {
     try {
       const response = await ApiService.toggleTask(id);
@@ -112,11 +118,13 @@ function App() {
     }
   };
 
+  // set task to edit
   const handleEditTask = (task) => {
     setEditingTask(task);
     setShowForm(true);
   };
 
+  // cancel edit
   const handleCancelEdit = () => {
     setEditingTask(null);
     setShowForm(false);

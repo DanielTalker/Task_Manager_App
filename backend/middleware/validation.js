@@ -17,9 +17,7 @@ const validateTask = (req, res, next) => {
   if (description !== undefined) {
     if (typeof description !== 'string') {
       errors.push('Description must be a string');
-    } else if (description.length > 500) {
-      errors.push('Description must be less than 500 characters');
-    }
+    } 
   }
 
   // validate priority
@@ -35,12 +33,11 @@ const validateTask = (req, res, next) => {
     });
   }
 
-  // Trim strings
+  // trim strings
   req.body.title = title.trim();
   if (description !== undefined) {
     req.body.description = description.trim();
   }
-
   next();
 };
 
@@ -76,9 +73,7 @@ const validateTaskUpdate = (req, res, next) => {
   if (description !== undefined) {
     if (typeof description !== 'string') {
       errors.push('Description must be a string');
-    } else if (description.length > 500) {
-      errors.push('Description must be less than 500 characters');
-    }
+    } 
   }
 
   // validate completed

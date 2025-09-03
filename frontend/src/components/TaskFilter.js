@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/TaskFilter.css';
 
 function TaskFilter({ currentFilter, onFilterChange, taskCounts }) {
+  // define filter options
   const filters = [
     {
       key: 'all',
@@ -26,6 +27,7 @@ function TaskFilter({ currentFilter, onFilterChange, taskCounts }) {
   return (
     <div className="task-filter">
       <div className="filter-tabs">
+        {/* render filter buttons */}
         {filters.map(filter => (
           <button
             key={filter.key}
@@ -39,7 +41,6 @@ function TaskFilter({ currentFilter, onFilterChange, taskCounts }) {
           </button>
         ))}
       </div>
-      
     </div>
   );
 }

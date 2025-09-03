@@ -36,6 +36,7 @@ function TaskItem({ task, onToggle, onEdit, onDelete, isActive }) {
           </span>
         </div>
         <div className="task-actions">
+          {/* edit button */}
           <button
             className="action-btn edit-btn"
             onClick={() => onEdit(task)}
@@ -44,6 +45,7 @@ function TaskItem({ task, onToggle, onEdit, onDelete, isActive }) {
           >
             ✏️
           </button>
+          {/* delete button */}
           <button
             className="action-btn delete-btn"
             onClick={() => onDelete(task.id)}
@@ -68,6 +70,7 @@ function TaskItem({ task, onToggle, onEdit, onDelete, isActive }) {
         </div>
         
         <div className="task-toggle">
+          {/* toggle complete/pending */}
           <label className="toggle-container">
             <input
               type="checkbox"
