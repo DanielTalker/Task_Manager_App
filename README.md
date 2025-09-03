@@ -29,6 +29,7 @@ The frontend will start on port 3000
 - PATCH /api/tasks/:id/toggle → Delete task by id
 
 #### Example Response
+```bash
 {
   "success": true,
   
@@ -47,6 +48,7 @@ The frontend will start on port 3000
     "priority": "medium"
   }
 }
+```
 
 ### Assumptions and Design Decisions
 - Tasks are stored in memory (array) and not persisted in a database, since persistence was not required for this assignment.  
@@ -75,6 +77,7 @@ The frontend will start on port 3000
 - **Testing & Debugging (~20 minutes)**  
   - Manual API testing (Postman / curl)  
   - Fixing edge cases and improving error messages  
+
 
 
 
