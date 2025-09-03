@@ -21,6 +21,8 @@ The backend will start on port 4000
   
 The frontend will start on port 3000
 
+---
+
 ### Endpoints
 - GET /api/tasks → Get all tasks
 - POST /api/tasks → Create a new task
@@ -32,23 +34,18 @@ The frontend will start on port 3000
 ```bash
 {
   "success": true,
-  
   "data": {
-  
     "id": 1,
-    
     "title": "My Task",
-    
     "description": "Optional details",
-    
     "completed": false,
-    
     "createdAt": "2025-09-03T09:00:00.000Z",
-    
     "priority": "medium"
   }
 }
 ```
+
+---
 
 ### Assumptions and Design Decisions
 - Tasks are stored in memory (array) and not persisted in a database, since persistence was not required for this assignment.  
@@ -58,6 +55,8 @@ The frontend will start on port 3000
 - Used `PUT` for partial updates (instead of full replacement) to simplify client-side usage.  
 - Implemented an endless carousel in the frontend using React hooks and vanilla JavaScript logic (no external carousel libraries).  
 - Focused on clean code, error handling, and user-friendly UI.
+
+---
 
 ### Time Breakdown
 - **Backend Development (~80 minutes)**  
@@ -77,6 +76,7 @@ The frontend will start on port 3000
 - **Testing & Debugging (~20 minutes)**  
   - Manual API testing (Postman / curl)  
   - Fixing edge cases and improving error messages  
+
 
 
 
