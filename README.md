@@ -74,8 +74,9 @@ The frontend will start on port 3000
   - Priority indicators and hover effects  
 
 - **Testing & Debugging (~20 minutes)**  
-  - Manual API testing (Postman / curl)  
+  - Manual API testing
   - Fixing edge cases and improving error messages  
+
 
 
 
