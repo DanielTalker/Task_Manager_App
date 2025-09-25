@@ -4,6 +4,34 @@ Features include task creation, editing, deletion, search, and an endless carous
 
 ---
 
+## Features & Highlights
+
+- Create, update, delete tasks  
+- Toggle completion status  
+- Filter tasks by status (All, Pending, Completed)  
+- Search tasks by title or description  
+- Endless carousel UI to browse tasks  
+- Input validation and error handling  
+- Clean UI with priority badges and overlay when completed  
+- Design consistent and responsive
+
+---
+
+## Tech Stack & Tools
+
+| Layer       | Technology / Library         |
+|--------------|------------------------------|
+| Backend      | Node.js, Express              |
+| Frontend     | React, JavaScript             |
+| HTTP Requests| fetch API (built‑in)         |
+| State        | React built‑in Hooks (useState, useEffect) |
+| Styling      | CSS Modules / global CSS       |
+| Validation    | Custom middleware (validation.js) |
+| Error Handling| Global error middleware in backend |
+| Deployment / Dev | Local environment, npm scripts |
+
+---
+
 ## Setup & Installation
 clone the project
 
@@ -76,6 +104,7 @@ The frontend will start on port 3000
 - **Testing & Debugging (~20 minutes)**  
   - Manual API testing
   - Fixing edge cases and improving error messages  
+
 
 
 
